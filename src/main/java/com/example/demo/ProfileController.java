@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 
 public class ProfileController {
-    private SystemProfile profile;
+    private final SystemProfile profile;
 
-    @Autowired
     public ProfileController(SystemProfile profile) {
         this.profile = profile;
     }
