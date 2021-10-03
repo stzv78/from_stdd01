@@ -4,9 +4,13 @@ plugins {
     id 'java'
 }
 
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+bootJar {
+    archiveBaseName = 'hw_springboot_1'
+    archiveVersion = '0.1.0'
+    archiveFileName = 'hw_springboot_1.jar'
+}
 
 repositories {
     mavenCentral()
@@ -16,6 +20,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-configuration-processor'
+    testImplementation 'org.testcontainers:junit-jupiter:1.15.3'
 }
 
 test {

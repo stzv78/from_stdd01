@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  app:
+    container_name: prodapp
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: hw_springboot_1_prod:latest
+    ports:
+      - 8081:8081
